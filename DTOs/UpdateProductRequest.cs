@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace productAPI.DTOs
 {
-    public class ProductCreateDTO
+    public class UpdateProductRequest
     {
         [Required]
         public string Name { get; set; }

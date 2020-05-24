@@ -18,48 +18,48 @@ namespace productAPI.Controllers
         public ProductController(IProductRepo repository, IMapper mapper)
         {
             _repository = repository;
-            _mapper = mapper;
+            _mapper = mapper;            
         }
 
         // GET /product
         [HttpGet]
-        public ActionResult<IEnumerable<ProductReadDTO>> GetAllProducts()
+        public ActionResult<IEnumerable<GetProductRequest>> GetAllProducts()
         {
             var products = _repository.GetProducts();
 
-            return Ok(_mapper.Map<IEnumerable<ProductReadDTO>>(products));
+            return Ok(_mapper.Map<IEnumerable<GetProductRequest>>(products));
         }
 
         // POST /product/{id}
         [HttpGet("{id}", Name = "GetProductById")]
-        public ActionResult<ProductReadDTO> GetProductById(int id)
+        public ActionResult<GetProductRequest> GetProductById(int id)
         {
             var product = _repository.GetProductById(id);
 
-            if (product != null)
+            if (product == null)
             {
-                return Ok(_mapper.Map<ProductReadDTO>(product));
+                return NotFound();
             }
 
-            return NotFound();
+            return Ok(_mapper.Map<GetProductRequest>(product));
         }
 
         // POST /product
         [HttpPost]
-        public ActionResult<ProductReadDTO> CreateProduct(ProductCreateDTO productDTO)
+        public ActionResult<GetProductRequest> CreateProduct(CreateProductRequest productDTO)
         {
             var productModel = _mapper.Map<ProductModel>(productDTO);
             _repository.CreateProduct(productModel);
             _repository.SaveChanges();
 
-            var prodReadDTO = _mapper.Map<ProductReadDTO>(productModel);
+            var prodReadDTO = _mapper.Map<GetProductRequest>(productModel);
 
             return CreatedAtRoute(nameof(GetProductById), new { Id = prodReadDTO.Id }, prodReadDTO);
         }
 
         // PUT /product/{id}
         [HttpPut("{id}")]
-        public ActionResult UpdateProduct(int id, ProductUpdateDTO productDTO)
+        public ActionResult UpdateProduct(int id, UpdateProductRequest productDTO)
         {
             var productFromRepo = _repository.GetProductById(id);
 

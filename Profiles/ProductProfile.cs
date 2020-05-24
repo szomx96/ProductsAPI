@@ -8,9 +8,9 @@ namespace productAPI.Profiles
     {
         public ProductProfile()
         {
-            CreateMap<ProductModel, ProductReadDTO>();
-            CreateMap<ProductCreateDTO, ProductModel>();
-            CreateMap<ProductUpdateDTO, ProductModel>();
+            CreateMap<ProductModel, GetProductRequest>();
+            CreateMap<CreateProductRequest, ProductModel>();
+            CreateMap<UpdateProductRequest, ProductModel>();
         }
     }
 }
