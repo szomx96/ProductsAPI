@@ -1,30 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ProductAPI\\productAPI.csproj": {}
+    "/home/user/Projects/ProductsAPI/productAPI.csproj": {}
   },
   "projects": {
-    "D:\\ProductAPI\\productAPI.csproj": {
+    "/home/user/Projects/ProductsAPI/productAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProductAPI\\productAPI.csproj",
+        "projectUniqueName": "/home/user/Projects/ProductsAPI/productAPI.csproj",
         "projectName": "productAPI",
-        "projectPath": "D:\\ProductAPI\\productAPI.csproj",
-        "packagesPath": "C:\\Users\\szomx\\.nuget\\packages\\",
-        "outputPath": "D:\\ProductAPI\\obj\\",
+        "projectPath": "/home/user/Projects/ProductsAPI/productAPI.csproj",
+        "packagesPath": "/home/user/.nuget/packages/",
+        "outputPath": "/home/user/Projects/ProductsAPI/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\szomx\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/user/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -74,6 +69,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -82,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
         }
       }
     }

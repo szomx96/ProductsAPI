@@ -5,7 +5,6 @@ using productAPI.Models;
 
 namespace productAPI.Data
 {
-
     public class ProductRepo : IProductRepo
     {
         private readonly ProductContext _context;

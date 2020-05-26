@@ -21,18 +21,18 @@ namespace productAPI.Controllers
             _mapper = mapper;            
         }
 
-        // GET /product
+        // GET /products
         [HttpGet]
-        public ActionResult<IEnumerable<GetProductRequest>> GetAllProducts()
+        public ActionResult<IEnumerable<ProductDTO>> GetAllProducts()
         {
             var products = _repository.GetProducts();
 
-            return Ok(_mapper.Map<IEnumerable<GetProductRequest>>(products));
+            return Ok(_mapper.Map<IEnumerable<ProductDTO>>(products));
         }
 
         // POST /product/{id}
         [HttpGet("{id}", Name = "GetProductById")]
-        public ActionResult<GetProductRequest> GetProductById(int id)
+        public ActionResult<ProductDTO> GetProductById(int id)
         {
             var product = _repository.GetProductById(id);
 
@@ -41,18 +41,18 @@ namespace productAPI.Controllers
                 return NotFound();
             }
 
-            return Ok(_mapper.Map<GetProductRequest>(product));
+            return Ok(_mapper.Map<ProductDTO>(product));
         }
 
         // POST /product
         [HttpPost]
-        public ActionResult<GetProductRequest> CreateProduct(CreateProductRequest productDTO)
+        public ActionResult<ProductDTO> CreateProduct(CreateProductRequest request)
         {
-            var productModel = _mapper.Map<ProductModel>(productDTO);
+            var productModel = _mapper.Map<ProductModel>(request);
             _repository.CreateProduct(productModel);
             _repository.SaveChanges();
 
-            var prodReadDTO = _mapper.Map<GetProductRequest>(productModel);
+            var prodReadDTO = _mapper.Map<ProductDTO>(productModel);
 
             return CreatedAtRoute(nameof(GetProductById), new { Id = prodReadDTO.Id }, prodReadDTO);
         }
@@ -90,6 +90,5 @@ namespace productAPI.Controllers
             _repository.SaveChanges();
             return NoContent();
         }
-
     }
 }
