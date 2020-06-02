@@ -117,3 +117,13 @@ D:/ProductAPI/bin/Debug/netcoreapp3.1/Newtonsoft.Json.Bson.dll
 /home/user/Projects/ProductsAPI/obj/Debug/netcoreapp3.1/productAPI.dll
 /home/user/Projects/ProductsAPI/obj/Debug/netcoreapp3.1/productAPI.pdb
 /home/user/Projects/ProductsAPI/obj/Debug/netcoreapp3.1/productAPI.genruntimeconfig.cache
+/home/user/Projects/ProductsAPI/bin/Debug/netcoreapp3.1/published/web.config
+/home/user/Projects/ProductsAPI/bin/Debug/netcoreapp3.1/published/appsettings.Development.json
+/home/user/Projects/ProductsAPI/bin/Debug/netcoreapp3.1/published/appsettings.json
+/home/user/Projects/ProductsAPI/bin/Debug/netcoreapp3.1/published/productAPI.deps.json
+/home/user/Projects/ProductsAPI/bin/Debug/netcoreapp3.1/published/productAPI.runtimeconfig.json
+/home/user/Projects/ProductsAPI/bin/Debug/netcoreapp3.1/Microsoft.OpenApi.dll
+/home/user/Projects/ProductsAPI/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll
+/home/user/Projects/ProductsAPI/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/user/Projects/ProductsAPI/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/user/Projects/ProductsAPI/obj/Debug/netcoreapp3.1/productAPI.MvcApplicationPartsAssemblyInfo.cs
